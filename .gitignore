@@ -36,3 +36,14 @@ eagle.epf
 *.eps
 hardware/PolyCase/
 *.lck
+*.pro
+*.job
+*.GBL
+*.GBO
+*.GBS
+*.GML
+*.GTL
+*.GTO
+*.GTP
+*.GTS
+*.TXT
