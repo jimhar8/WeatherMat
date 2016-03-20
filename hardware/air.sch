@@ -1644,7 +1644,7 @@ Through-hole photocell (http://www.sparkfun.com/products/9088)&lt;br&gt;
 <attribute name="VALUE" x="49.53" y="23.622" size="1.778" layer="96" rot="R180"/>
 </instance>
 <instance part="GND4" gate="1" x="43.18" y="-7.62"/>
-<instance part="GND2" gate="1" x="-7.62" y="0"/>
+<instance part="GND2" gate="1" x="-7.62" y="7.62"/>
 <instance part="U1" gate="G$1" x="7.62" y="17.78" smashed="yes">
 <attribute name="NAME" x="5.334" y="26.162" size="1.778" layer="95"/>
 <attribute name="VALUE" x="3.81" y="6.858" size="1.778" layer="96"/>
@@ -1702,7 +1702,7 @@ Through-hole photocell (http://www.sparkfun.com/products/9088)&lt;br&gt;
 <segment>
 <wire x1="-2.54" y1="15.24" x2="-7.62" y2="15.24" width="0.1524" layer="91"/>
 <pinref part="GND2" gate="1" pin="GND"/>
-<wire x1="-7.62" y1="15.24" x2="-7.62" y2="2.54" width="0.1524" layer="91"/>
+<wire x1="-7.62" y1="15.24" x2="-7.62" y2="10.16" width="0.1524" layer="91"/>
 <wire x1="-7.62" y1="15.24" x2="-7.62" y2="22.86" width="0.1524" layer="91"/>
 <junction x="-7.62" y="15.24"/>
 <pinref part="J2" gate="G$1" pin="5"/>
@@ -1771,9 +1771,9 @@ Through-hole photocell (http://www.sparkfun.com/products/9088)&lt;br&gt;
 <wire x1="25.4" y1="12.7" x2="25.4" y2="15.24" width="0.1524" layer="91"/>
 <pinref part="J2" gate="G$1" pin="2"/>
 <wire x1="-25.4" y1="15.24" x2="-17.78" y2="15.24" width="0.1524" layer="91"/>
-<wire x1="-17.78" y1="15.24" x2="-17.78" y2="5.08" width="0.1524" layer="91"/>
-<wire x1="-17.78" y1="5.08" x2="20.32" y2="5.08" width="0.1524" layer="91"/>
-<wire x1="20.32" y1="5.08" x2="20.32" y2="15.24" width="0.1524" layer="91"/>
+<wire x1="-17.78" y1="15.24" x2="-17.78" y2="2.54" width="0.1524" layer="91"/>
+<wire x1="-17.78" y1="2.54" x2="20.32" y2="2.54" width="0.1524" layer="91"/>
+<wire x1="20.32" y1="2.54" x2="20.32" y2="15.24" width="0.1524" layer="91"/>
 <junction x="20.32" y="15.24"/>
 <pinref part="U1" gate="G$1" pin="2"/>
 </segment>
