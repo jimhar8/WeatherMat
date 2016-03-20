@@ -4573,6 +4573,7 @@ transient voltage suppressor</description>
 <part name="GND3" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="C1" library="SparkFun-Capacitors" deviceset="CAP" device="PTH" value="0.1uF"/>
 <part name="GND4" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
+<part name="GND12" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -4686,6 +4687,7 @@ Required?</text>
 <attribute name="VALUE" x="70.104" y="58.801" size="1.778" layer="96"/>
 </instance>
 <instance part="GND4" gate="1" x="68.58" y="53.34"/>
+<instance part="GND12" gate="1" x="134.62" y="-35.56"/>
 </instances>
 <busses>
 <bus name="GPBUS:GP5,GP6">
@@ -4802,6 +4804,28 @@ Required?</text>
 <pinref part="GND4" gate="1" pin="GND"/>
 <pinref part="C1" gate="G$1" pin="2"/>
 <wire x1="68.58" y1="55.88" x2="68.58" y2="58.42" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="IC1" gate="G$1" pin="CH7"/>
+<pinref part="GND12" gate="1" pin="GND"/>
+<wire x1="132.08" y1="-25.4" x2="134.62" y2="-25.4" width="0.1524" layer="91"/>
+<wire x1="134.62" y1="-25.4" x2="134.62" y2="-33.02" width="0.1524" layer="91"/>
+<pinref part="IC1" gate="G$1" pin="CH5"/>
+<wire x1="132.08" y1="-20.32" x2="134.62" y2="-20.32" width="0.1524" layer="91"/>
+<wire x1="134.62" y1="-20.32" x2="134.62" y2="-22.86" width="0.1524" layer="91"/>
+<junction x="134.62" y="-25.4"/>
+<pinref part="IC1" gate="G$1" pin="CH6"/>
+<wire x1="134.62" y1="-22.86" x2="134.62" y2="-25.4" width="0.1524" layer="91"/>
+<wire x1="132.08" y1="-22.86" x2="134.62" y2="-22.86" width="0.1524" layer="91"/>
+<junction x="134.62" y="-22.86"/>
+<pinref part="IC1" gate="G$1" pin="CH3"/>
+<wire x1="132.08" y1="-15.24" x2="134.62" y2="-15.24" width="0.1524" layer="91"/>
+<wire x1="134.62" y1="-15.24" x2="134.62" y2="-20.32" width="0.1524" layer="91"/>
+<junction x="134.62" y="-20.32"/>
+<pinref part="IC1" gate="G$1" pin="CH1"/>
+<wire x1="132.08" y1="-10.16" x2="134.62" y2="-10.16" width="0.1524" layer="91"/>
+<wire x1="134.62" y1="-10.16" x2="134.62" y2="-15.24" width="0.1524" layer="91"/>
+<junction x="134.62" y="-15.24"/>
 </segment>
 </net>
 <net name="V+" class="1">
@@ -5089,27 +5113,6 @@ Required?</text>
 <junction x="182.88" y="10.16"/>
 </segment>
 </net>
-<net name="N$17" class="0">
-<segment>
-<pinref part="IC1" gate="G$1" pin="CH1"/>
-<pinref part="J5" gate="G$1" pin="2"/>
-<wire x1="132.08" y1="-10.16" x2="142.24" y2="-10.16" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$18" class="0">
-<segment>
-<pinref part="IC1" gate="G$1" pin="CH2"/>
-<pinref part="J5" gate="G$1" pin="3"/>
-<wire x1="132.08" y1="-12.7" x2="142.24" y2="-12.7" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$19" class="0">
-<segment>
-<pinref part="IC1" gate="G$1" pin="CH3"/>
-<pinref part="J5" gate="G$1" pin="4"/>
-<wire x1="132.08" y1="-15.24" x2="142.24" y2="-15.24" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="N$15" class="0">
 <segment>
 <pinref part="J2" gate="G$1" pin="SDA"/>
@@ -5152,6 +5155,24 @@ Required?</text>
 <wire x1="53.34" y1="-33.02" x2="53.34" y2="-35.56" width="0.1524" layer="91"/>
 <pinref part="J4" gate="G$1" pin="3"/>
 <wire x1="53.34" y1="-35.56" x2="71.12" y2="-35.56" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$17" class="0">
+<segment>
+<pinref part="IC1" gate="G$1" pin="CH2"/>
+<wire x1="132.08" y1="-12.7" x2="137.16" y2="-12.7" width="0.1524" layer="91"/>
+<wire x1="137.16" y1="-12.7" x2="137.16" y2="-10.16" width="0.1524" layer="91"/>
+<pinref part="J5" gate="G$1" pin="2"/>
+<wire x1="137.16" y1="-10.16" x2="142.24" y2="-10.16" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$18" class="0">
+<segment>
+<pinref part="IC1" gate="G$1" pin="CH4"/>
+<wire x1="132.08" y1="-17.78" x2="139.7" y2="-17.78" width="0.1524" layer="91"/>
+<wire x1="139.7" y1="-17.78" x2="139.7" y2="-12.7" width="0.1524" layer="91"/>
+<pinref part="J5" gate="G$1" pin="3"/>
+<wire x1="139.7" y1="-12.7" x2="142.24" y2="-12.7" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
