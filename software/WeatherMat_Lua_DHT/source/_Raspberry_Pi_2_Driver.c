@@ -51,7 +51,8 @@ static int Raspberry_Pi_2_Driver_read(lua_State *L){                /* Internal 
 }
 
 
-/* Register this file's functions with the
+/* http://www.troubleshooters.com/codecorn/lua/lua_lua_calls_c.htm
+ * Register this file's functions with the
  * luaopen_libraryname() function, where libraryname
  * is the name of the compiled .so output. In other words
  * it's the filename (but not extension) after the -o
