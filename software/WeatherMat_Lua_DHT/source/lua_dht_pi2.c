@@ -23,7 +23,7 @@
 #include <lauxlib.h>                           /* Always include this */
 #include <lualib.h>                            /* Always include this */
 
-#include "Raspberry_Pi_2/pi_2_dht_read.h"
+#include "pi_2_dht_read.h"
 
 
 
