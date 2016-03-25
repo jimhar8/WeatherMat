@@ -22,7 +22,7 @@
 --]]
 
 package.path = package.path .. ';../?.lua'
-package.cpath = package.cpath .. ';../?.so'
+package.cpath = package.cpath .. ';../../WeatherMat_common/?.so'
 
 require("common")
 require("platform")

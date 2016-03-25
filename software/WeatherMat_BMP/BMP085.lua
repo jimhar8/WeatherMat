@@ -19,6 +19,8 @@
 -- import logging
 -- import time
 
+package.path = package.path .. ';../WeatherMat_common/?.lua'
+
 
 local logging = require "logging"
 local LuaI2C = require "LuaI2C"
