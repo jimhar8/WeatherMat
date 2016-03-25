@@ -21,7 +21,7 @@
 #ifndef PI_2_DHT_READ_H
 #define PI_2_DHT_READ_H
 
-#include "../common_dht_read.h"
+#include "common_dht_read.h"
 
 // Read DHT sensor connected to GPIO pin (using BCM numbering).  Humidity and temperature will be 
 // returned in the provided parameters. If a successfull reading could be made a value of 0 

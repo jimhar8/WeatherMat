@@ -21,8 +21,8 @@
 
 --]]
 
-package.path = package.path .. ';../WeatherMat_DHT/?.lua'
-package.cpath = package.cpath .. ';../WeatherMat_DHT/?.so'
+package.path = package.path .. ';../?.lua'
+package.cpath = package.cpath .. ';../?.so'
 
 require("common")
 require("platform")
