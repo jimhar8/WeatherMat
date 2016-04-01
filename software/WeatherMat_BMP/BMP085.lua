@@ -302,6 +302,8 @@ function BMP085:read_sealevel_pressure(altitude_m)
 	p0 = pressure / ((1.0 - altitude_m / 44330.0) ^ 5.255)
 	
 	self.logger:log(logging.DEBUG, string.format('Sealevel pressure %f Pa', p0))
+	self.logger:log(logging.DEBUG, string.format('Sealevel pressure %f in Hg', p0 * 0.0002953))
+	
 	
 	return p0
 	
@@ -312,7 +314,7 @@ local instance = BMP085(BMP085_STANDARD, "/dev/i2c-1", 0x77)
 --instance:read_raw_pressure()
 instance:read_temperature()
 instance:read_pressure()	
-instance:read_sealevel_pressure(441.0)		
+instance:read_sealevel_pressure(461.5)		
 
 
 
