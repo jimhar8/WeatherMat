@@ -19,6 +19,8 @@
 -- import logging
 -- import time
 
+--jjh: this seems to be from http://lua-users.org/wiki/ObjectOrientationTutorial
+
 
 local logging = require "logging"
 local bit = require("bit")
@@ -51,6 +53,7 @@ function LuaI2C.new(devAddress, i2cAddress, logger)
 	else
 
 	   self.logger = logger
+	   self.logger:log(logging.DEBUG, "Initializing LuaI2C")
 	   
 	end
 	  
