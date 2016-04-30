@@ -27,6 +27,9 @@ local LuaI2C = require "LuaI2C"
 local bit = require("bit")
 require("msleep")
 
+-- # TSL2591 default address.
+TSL2591_I2CADDR           = 0x29
+
 VISIBLE = 2  -- channel 0 - channel 1
 INFRARED = 1  -- channel 1
 FULLSPECTRUM = 0  -- channel 0
@@ -71,7 +74,12 @@ REGISTER_CHAN1_HIGH = 0x17
 local TSL2591 = {}
 TSL2591.__index = TSL2591
 
+
+TSL2591.integration = {[100] = 0x00, [200] = 0x01, [300] = 0x02, 
+    [400] = 0x03, [500] = 0x04, [600] = 0x05 }
+    
 TSL2591.gain = {GAIN_LOW = 0x00, GAIN_MED = 0x10, GAIN_HIGH = 0x20, GAIN_MAX = 0x30}
+
 TSL2591.channel = {FULLSPECTRUM = 0, INFRARED = 1, VISIBLE = 2}
 
 setmetatable(TSL2591, {
@@ -96,37 +104,25 @@ function TSL2591.new(address, i2c, intTime, gain, ...)
 						   end)
 						   
 						   
-	-- self.integration_time = integration
-	-- self.gain = gain
-	-- self.set_timing(self.integration_time)
-	-- self.set_gain(self.gain)
-	-- self.disable()  # to be sure		   
-						   
-    self.integration_time = intTime
-	self.gain = gain
-
+   
 	self.logger:setLevel (logging.DEBUG)
-	self.logger:log(logging.DEBUG, "Initializing TSL2591")
+	self.logger:log(logging.DEBUG, "Initializing TSL2591") 
 
-	mode = mode or TSL2591_STANDARD
 	address = address or TSL2591_I2CADDR
-	i2c = i2c or "/dev/i2c-1"
-
-	-- Check that mode is valid.
-	local modes = Set{TSL2591_ULTRALOWPOWER, TSL2591_STANDARD, TSL2591_HIGHRES, TSL2591_ULTRAHIGHRES}
-
-	if not modes[mode] then
-	error (string.format('Unexpected mode value %d.  Set mode to one of TSL2591_ULTRALOWPOWER, TSL2591_STANDARD, TSL2591_HIGHRES, or TSL2591_ULTRAHIGHRES', mode))
-	end
-
-	self.mode = mode
-	
-	
-	-- Create I2C device.
+	i2c = i2c or "/dev/i2c-1"    
+    
+    -- Create I2C device.
 	self.device = LuaI2C(address, i2c, self.logger)
+						   
+    self.integration_time_byte = TSL2591.integration[intTime]
+    self.integration_time = intTime
+    
+	self.gain = gain
+    
+    self:set_timing(self.integration_time)
+    self:set_gain(self.gain)    
+    self:disable() -- to be sure
 
-	--Load calibration values.
-	--self:load_calibration() 
 	
 	return self
   
@@ -137,9 +133,9 @@ function TSL2591:set_timing(integration)
 
 	self:enable()
 	self.integration_time = integration
-	
-	self.device:write8(bit.bor(COMMAND_BIT, REGISTER_CONTROL),
-		bit.bor(self.integration_time, self.gain))
+    
+    self.device:write8(bit.bor(COMMAND_BIT, REGISTER_CONTROL),
+		bit.bor(self.integration_time_byte, TSL2591.gain[self.gain]))
 	
 	self:disable()
 
@@ -147,7 +143,7 @@ end
 
 function TSL2591:get_timing()
 
-	return self.integration_time
+	return self.integration_time_byte
 
 end
 
@@ -157,7 +153,7 @@ function TSL2591:set_gain(gain)
 	self.gain = gain
 	
 	self.device:write8(bit.bor(COMMAND_BIT, REGISTER_CONTROL),
-		bit.bor(self.integration_time, self.gain))
+		bit.bor(self.integration_time_byte, TSL2591.gain[self.gain]))
 	
 	self:disable()
 
@@ -173,12 +169,23 @@ function TSL2591:calculate_lux(full, ir)
 
 	-- check for overflow conditions first
 	
-	if (full == 0xFFFF) | (ir == 0xFFFF):
+	if (full == 0xFFFF) or (ir == 0xFFFF) then
 		return 0
+    end
 		
 	atime = self.integration_time	
-	again = TSL2591.gain[self.gain]
-	
+    
+    if self.gain == "GAIN_LOW" then
+        again = 1.0
+    elseif self.gain == "GAIN_MED" then
+        again = 25.0
+    elseif self.gain == "GAIN_HIGH" then
+        again = 428.0   
+    else -- GAIN_MAX
+        again = 9876.0
+    end
+    
+
 	--# cpl = (ATIME * AGAIN) / DF
 	cpl = (atime * again) / LUX_DF
 	lux1 = (full - (LUX_COEFB * ir)) / cpl
@@ -212,8 +219,8 @@ function TSL2591:get_full_luminosity()
 	self:enable()
 	msleep(1.2 * self.integration_time)
 	
-	full = self.device:readU16BE(bit.bor(COMMAND_BIT, REGISTER_CHAN0_LOW))
-	ir = self.device:readU16BE(bit.bor(COMMAND_BIT, REGISTER_CHAN1_LOW))
+	full = self.device:readU16LE(bit.bor(COMMAND_BIT, REGISTER_CHAN0_LOW))
+	ir = self.device:readU16LE(bit.bor(COMMAND_BIT, REGISTER_CHAN1_LOW))
 	
 	self:disable()
 	
@@ -240,7 +247,11 @@ end
   
   
 		
-local instance = TSL2591("/dev/i2c-1", 0x29)
+local instance = TSL2591("/dev/i2c-1", 0x29, 100, "GAIN_MED")
+full, ir = instance:get_full_luminosity() 
+lux = instance:calculate_lux(full, ir)
+
+print (string.format('Lux = %f  full = %i  ir = %i', lux, full, ir))
 -- instance:read_raw_temp()
 
 
