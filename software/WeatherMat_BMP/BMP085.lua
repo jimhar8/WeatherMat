@@ -20,12 +20,12 @@
 -- import time
 
 package.path = package.path .. ';../WeatherMat_common/?.lua'
-
+package.cpath = package.cpath .. ';../WeatherMat_common/msleep/?.so'
 
 local logging = require "logging"
 local LuaI2C = require "LuaI2C"
 local bit = require("bit")
-local socket = require("socket")
+require("msleep")
 
 
 -- # BMP085 default address.
@@ -167,7 +167,7 @@ function BMP085:read_raw_temp()
 	-- """Reads the raw (uncompensated) temperature from the sensor."""
 	
 	self.device:write8(BMP085_CONTROL, BMP085_READTEMPCMD)
-	socket.sleep(0.005)	
+	msleep(5) 	
 	raw = self.device:readU16BE(BMP085_TEMPDATA)
 	
 	self.logger:log(logging.DEBUG, string.format('Raw temp 0x%04x (%d)', bit.band(raw, 0xFFFF), raw))
@@ -181,13 +181,13 @@ function BMP085:read_raw_pressure()
 	--"""Reads the raw (uncompensated) pressure level from the sensor."""
 	self.device:write8(BMP085_CONTROL, BMP085_READPRESSURECMD + (bit.lshift(self.mode , 6)))
 	if self.mode == BMP085_ULTRALOWPOWER then
-		socket.sleep(0.005)	
+		msleep(5)	
 	elseif self.mode == BMP085_HIGHRES then
-		socket.sleep(0.014)	
+		msleep(14)	
 	elseif self.mode == BMP085_ULTRAHIGHRES then
-		socket.sleep(0.026)	
+		msleep(26)	
 	else
-		socket.sleep(0.008)
+		msleep(8)
 	end	
 		
 	msb = self.device:readU8(BMP085_PRESSUREDATA)
@@ -313,7 +313,7 @@ local instance = BMP085(BMP085_STANDARD, "/dev/i2c-1", 0x77)
 -- instance:read_raw_temp()
 --instance:read_raw_pressure()
 instance:read_temperature()
-instance:read_pressure()	
+-- instance:read_pressure()	
 instance:read_sealevel_pressure(461.5)		
 
 

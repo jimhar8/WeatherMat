@@ -23,8 +23,7 @@ Permission is hereby granted, free of charge, to any person obtaining a copy
 local common = {}
 
 local platform = require "platform"
---local Raspberry_Pi_module = require "Raspberry_Pi"
-local Raspberry_Pi_2 = require "Raspberry_Pi_2"
+local DHT22_module = require "DHT22"
 
 
 -- Define error constants.
@@ -52,10 +51,9 @@ local function get_platform()
 		version = platform.pi_version()		
 				
 		if version == 1 then		
-			--return Raspberry_Pi_module
 			assert('No driver for Pi 1 yet!')				
 		elseif version == 2 then	
-			return Raspberry_Pi_2		
+			return DHT22_module		
 		else 
 			assert('No driver for detected Raspberry Pi version available!')			
 		end

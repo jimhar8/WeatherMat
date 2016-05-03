@@ -19,6 +19,8 @@
 -- import logging
 -- import time
 
+--jjh: class derivation seems to be from http://lua-users.org/wiki/ObjectOrientationTutorial
+
 
 local logging = require "logging"
 local bit = require("bit")
@@ -32,6 +34,8 @@ setmetatable(LuaI2C, {
     return cls.new(...)
   end,
 })
+
+local device = nil
 
 
 function LuaI2C.new(devAddress, i2cAddress, logger)
@@ -51,16 +55,22 @@ function LuaI2C.new(devAddress, i2cAddress, logger)
 	else
 
 	   self.logger = logger
+	   self.logger:log(logging.DEBUG, "Initializing LuaI2C")
 	   
 	end
 	  
 
 	self.devAddress = devAddress or "/dev/i2c-1"
 	self.i2cAddress = i2cAddress or 0x77
-
-	self.device = I2C(devAddress)
-
-
+    
+    if device then
+        self.logger:log(logging.DEBUG, "Device already opened ") 
+    else    
+        device = I2C(devAddress)   
+    end
+    
+    self.device = device
+    
 	return self
   
 end
@@ -277,7 +287,7 @@ end
 return LuaI2C
 
 
--- local instance = LuaI2C("/dev/i2c-1")
+--local instance = LuaI2C("/dev/i2c-1")
 
 -- instance:write8(0xF4, 0x2E)
 -- result = instance:readU16BE(0xF6)

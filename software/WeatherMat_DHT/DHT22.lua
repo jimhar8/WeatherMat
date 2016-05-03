@@ -19,11 +19,11 @@
 
 ]]--
 
-local Raspberry_Pi_2 = {}
+local DHT22 = {}
 
 package.cpath  = package.cpath .. ';../Lua_DHT/?.so'
 
-function Raspberry_Pi_2.readSensor(sensor, pin) 
+function DHT22.readSensor(sensor, pin) 
 
 	--# Validate pin is a valid GPIO.
 	if not pin or tonumber(pin) < 0 or tonumber(pin) > 31 then 
@@ -45,7 +45,7 @@ function Raspberry_Pi_2.readSensor(sensor, pin)
 end
 
 
-return Raspberry_Pi_2
+return DHT22
 
 
 

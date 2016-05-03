@@ -26,7 +26,7 @@ package.cpath = package.cpath .. ';../../WeatherMat_common/?.so'
 
 require("common")
 require("platform")
-require("Raspberry_Pi_2")
+require("DHT22")
 require("pi2driver")
 
 local function valueExists(tbl, value)
