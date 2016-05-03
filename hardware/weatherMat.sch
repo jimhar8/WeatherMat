@@ -4592,6 +4592,8 @@ Wind Speed  (Digital)</text>
 <text x="73.66" y="96.52" size="1.778" layer="97">Ehternet Termination
 Required?</text>
 <text x="111.76" y="0" size="1.778" layer="97">8 channel ADC</text>
+<text x="203.2" y="-30.48" size="1.778" layer="97">Sparkfun SEN-08942</text>
+<text x="68.58" y="-50.8" size="1.778" layer="97">Adafruit SHT10</text>
 </plain>
 <instances>
 <instance part="P+3" gate="1" x="124.46" y="111.76"/>
