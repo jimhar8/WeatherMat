@@ -374,89 +374,6 @@ Note: The AM2302 is a wired version of the DHT-22 which typically requires less 
 <smd name="4" x="2.54" y="0" dx="5.08" dy="1.27" layer="1" rot="R90"/>
 <smd name="5" x="5.08" y="0" dx="5.08" dy="1.27" layer="1" rot="R90"/>
 </package>
-<package name="1X06_OVAL">
-<description>&lt;b&gt;PIN HEADER&lt;/b&gt;</description>
-<wire x1="-7.62" y1="0.635" x2="-7.62" y2="-0.635" width="0.2032" layer="51"/>
-<pad name="1" x="-6.35" y="0" drill="1" shape="long" rot="R90"/>
-<pad name="2" x="-3.81" y="0" drill="1" shape="long" rot="R90"/>
-<pad name="3" x="-1.27" y="0" drill="1" shape="long" rot="R90"/>
-<pad name="4" x="1.27" y="0" drill="1" shape="long" rot="R90"/>
-<pad name="5" x="3.81" y="0" drill="1" shape="long" rot="R90"/>
-<pad name="6" x="6.35" y="0" drill="1" shape="long" rot="R90"/>
-<text x="-7.6962" y="1.8288" size="0.8128" layer="25" ratio="18">&gt;NAME</text>
-<text x="-7.62" y="-3.175" size="0.4064" layer="27" ratio="10">&gt;VALUE</text>
-<rectangle x1="3.556" y1="-0.254" x2="4.064" y2="0.254" layer="51"/>
-<rectangle x1="1.016" y1="-0.254" x2="1.524" y2="0.254" layer="51"/>
-<rectangle x1="-1.524" y1="-0.254" x2="-1.016" y2="0.254" layer="51"/>
-<rectangle x1="-4.064" y1="-0.254" x2="-3.556" y2="0.254" layer="51"/>
-<rectangle x1="-6.604" y1="-0.254" x2="-6.096" y2="0.254" layer="51"/>
-<rectangle x1="6.096" y1="-0.254" x2="6.604" y2="0.254" layer="51"/>
-</package>
-<package name="1X06_ROUND">
-<description>&lt;b&gt;PIN HEADER&lt;/b&gt;</description>
-<wire x1="-7.62" y1="0.635" x2="-7.62" y2="-0.635" width="0.2032" layer="51"/>
-<pad name="1" x="-6.35" y="0" drill="1" diameter="1.6764" rot="R90"/>
-<pad name="2" x="-3.81" y="0" drill="1" diameter="1.6764" rot="R90"/>
-<pad name="3" x="-1.27" y="0" drill="1" diameter="1.6764" rot="R90"/>
-<pad name="4" x="1.27" y="0" drill="1" diameter="1.6764" rot="R90"/>
-<pad name="5" x="3.81" y="0" drill="1" diameter="1.6764" rot="R90"/>
-<pad name="6" x="6.35" y="0" drill="1" diameter="1.6764" rot="R90"/>
-<text x="-7.6962" y="1.8288" size="0.8128" layer="25" ratio="18">&gt;NAME</text>
-<text x="-7.62" y="-3.175" size="0.4064" layer="27" ratio="10">&gt;VALUE</text>
-<rectangle x1="3.556" y1="-0.254" x2="4.064" y2="0.254" layer="51"/>
-<rectangle x1="1.016" y1="-0.254" x2="1.524" y2="0.254" layer="51"/>
-<rectangle x1="-1.524" y1="-0.254" x2="-1.016" y2="0.254" layer="51"/>
-<rectangle x1="-4.064" y1="-0.254" x2="-3.556" y2="0.254" layer="51"/>
-<rectangle x1="-6.604" y1="-0.254" x2="-6.096" y2="0.254" layer="51"/>
-<rectangle x1="6.096" y1="-0.254" x2="6.604" y2="0.254" layer="51"/>
-</package>
-<package name="1X06_SMT">
-<description>&lt;p&gt;&lt;b&gt;Pin Headers&lt;/b&gt;&lt;br/&gt;
-6 Pin, 0.1"/2.54mm pitch, SMT&lt;/p&gt;</description>
-<wire x1="-7.62" y1="0.635" x2="-7.62" y2="-0.635" width="0.2032" layer="51"/>
-<smd name="1" x="-6.35" y="1.27" dx="1" dy="3.5" layer="1"/>
-<smd name="2" x="-3.81" y="-1.27" dx="1" dy="3.5" layer="1"/>
-<smd name="3" x="-1.27" y="1.27" dx="1" dy="3.5" layer="1"/>
-<smd name="4" x="1.27" y="-1.27" dx="1" dy="3.5" layer="1"/>
-<smd name="5" x="3.81" y="1.27" dx="1" dy="3.5" layer="1"/>
-<smd name="6" x="6.35" y="-1.27" dx="1" dy="3.5" layer="1"/>
-<text x="-7.6962" y="3.25" size="0.8128" layer="25" ratio="18">&gt;NAME</text>
-<text x="-7.62" y="-4.5" size="0.4064" layer="27" ratio="10">&gt;VALUE</text>
-</package>
-<package name="1X06_ROUND_76">
-<wire x1="-7.62" y1="0.635" x2="-7.62" y2="-0.635" width="0.2032" layer="51"/>
-<pad name="1" x="-6.35" y="0" drill="1" diameter="1.9304" rot="R90"/>
-<pad name="2" x="-3.81" y="0" drill="1" diameter="1.9304" rot="R90"/>
-<pad name="3" x="-1.27" y="0" drill="1" diameter="1.9304" rot="R90"/>
-<pad name="4" x="1.27" y="0" drill="1" diameter="1.9304" rot="R90"/>
-<pad name="5" x="3.81" y="0" drill="1" diameter="1.9304" rot="R90"/>
-<pad name="6" x="6.35" y="0" drill="1" diameter="1.9304" rot="R90"/>
-<text x="-7.6962" y="1.8288" size="0.8128" layer="25" ratio="18">&gt;NAME</text>
-<text x="-7.62" y="-3.175" size="0.4064" layer="27" ratio="10">&gt;VALUE</text>
-<rectangle x1="3.556" y1="-0.254" x2="4.064" y2="0.254" layer="51"/>
-<rectangle x1="1.016" y1="-0.254" x2="1.524" y2="0.254" layer="51"/>
-<rectangle x1="-1.524" y1="-0.254" x2="-1.016" y2="0.254" layer="51"/>
-<rectangle x1="-4.064" y1="-0.254" x2="-3.556" y2="0.254" layer="51"/>
-<rectangle x1="-6.604" y1="-0.254" x2="-6.096" y2="0.254" layer="51"/>
-<rectangle x1="6.096" y1="-0.254" x2="6.604" y2="0.254" layer="51"/>
-</package>
-<package name="1X06_ROUND_70">
-<wire x1="-7.62" y1="0.635" x2="-7.62" y2="-0.635" width="0.2032" layer="51"/>
-<pad name="1" x="-6.35" y="0" drill="1" diameter="1.778" rot="R90"/>
-<pad name="2" x="-3.81" y="0" drill="1" diameter="1.778" rot="R90"/>
-<pad name="3" x="-1.27" y="0" drill="1" diameter="1.778" rot="R90"/>
-<pad name="4" x="1.27" y="0" drill="1" diameter="1.778" rot="R90"/>
-<pad name="5" x="3.81" y="0" drill="1" diameter="1.778" rot="R90"/>
-<pad name="6" x="6.35" y="0" drill="1" diameter="1.778" rot="R90"/>
-<text x="-7.6962" y="1.8288" size="0.8128" layer="25" ratio="18">&gt;NAME</text>
-<text x="-7.62" y="-3.175" size="0.4064" layer="27" ratio="10">&gt;VALUE</text>
-<rectangle x1="3.556" y1="-0.254" x2="4.064" y2="0.254" layer="51"/>
-<rectangle x1="1.016" y1="-0.254" x2="1.524" y2="0.254" layer="51"/>
-<rectangle x1="-1.524" y1="-0.254" x2="-1.016" y2="0.254" layer="51"/>
-<rectangle x1="-4.064" y1="-0.254" x2="-3.556" y2="0.254" layer="51"/>
-<rectangle x1="-6.604" y1="-0.254" x2="-6.096" y2="0.254" layer="51"/>
-<rectangle x1="6.096" y1="-0.254" x2="6.604" y2="0.254" layer="51"/>
-</package>
 </packages>
 <symbols>
 <symbol name="PINHD5">
@@ -471,20 +388,6 @@ Note: The AM2302 is a wired version of the DHT-22 which typically requires less 
 <pin name="3" x="-2.54" y="0" visible="pad" length="short" direction="pas" function="dot"/>
 <pin name="4" x="-2.54" y="-2.54" visible="pad" length="short" direction="pas" function="dot"/>
 <pin name="5" x="-2.54" y="-5.08" visible="pad" length="short" direction="pas" function="dot"/>
-</symbol>
-<symbol name="PINHD6">
-<wire x1="-6.35" y1="-7.62" x2="1.27" y2="-7.62" width="0.4064" layer="94"/>
-<wire x1="1.27" y1="-7.62" x2="1.27" y2="10.16" width="0.4064" layer="94"/>
-<wire x1="1.27" y1="10.16" x2="-6.35" y2="10.16" width="0.4064" layer="94"/>
-<wire x1="-6.35" y1="10.16" x2="-6.35" y2="-7.62" width="0.4064" layer="94"/>
-<text x="-6.35" y="10.795" size="1.778" layer="95">&gt;NAME</text>
-<text x="-6.35" y="-10.16" size="1.778" layer="96">&gt;VALUE</text>
-<pin name="1" x="-2.54" y="7.62" visible="pad" length="short" direction="pas" function="dot"/>
-<pin name="2" x="-2.54" y="5.08" visible="pad" length="short" direction="pas" function="dot"/>
-<pin name="3" x="-2.54" y="2.54" visible="pad" length="short" direction="pas" function="dot"/>
-<pin name="4" x="-2.54" y="0" visible="pad" length="short" direction="pas" function="dot"/>
-<pin name="5" x="-2.54" y="-2.54" visible="pad" length="short" direction="pas" function="dot"/>
-<pin name="6" x="-2.54" y="-5.08" visible="pad" length="short" direction="pas" function="dot"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -573,79 +476,6 @@ Note: The AM2302 is a wired version of the DHT-22 which typically requires less 
 <connect gate="A" pin="3" pad="3"/>
 <connect gate="A" pin="4" pad="4"/>
 <connect gate="A" pin="5" pad="5"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="HEADER-1X6" prefix="JP" uservalue="yes">
-<description>&lt;b&gt;PIN HEADER&lt;/b&gt;</description>
-<gates>
-<gate name="A" symbol="PINHD6" x="0" y="-2.54"/>
-</gates>
-<devices>
-<device name="" package="1X06_OVAL">
-<connects>
-<connect gate="A" pin="1" pad="1"/>
-<connect gate="A" pin="2" pad="2"/>
-<connect gate="A" pin="3" pad="3"/>
-<connect gate="A" pin="4" pad="4"/>
-<connect gate="A" pin="5" pad="5"/>
-<connect gate="A" pin="6" pad="6"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-<device name="ROUND" package="1X06_ROUND">
-<connects>
-<connect gate="A" pin="1" pad="1"/>
-<connect gate="A" pin="2" pad="2"/>
-<connect gate="A" pin="3" pad="3"/>
-<connect gate="A" pin="4" pad="4"/>
-<connect gate="A" pin="5" pad="5"/>
-<connect gate="A" pin="6" pad="6"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-<device name="SMT" package="1X06_SMT">
-<connects>
-<connect gate="A" pin="1" pad="1"/>
-<connect gate="A" pin="2" pad="2"/>
-<connect gate="A" pin="3" pad="3"/>
-<connect gate="A" pin="4" pad="4"/>
-<connect gate="A" pin="5" pad="5"/>
-<connect gate="A" pin="6" pad="6"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-<device name="76MIL" package="1X06_ROUND_76">
-<connects>
-<connect gate="A" pin="1" pad="1"/>
-<connect gate="A" pin="2" pad="2"/>
-<connect gate="A" pin="3" pad="3"/>
-<connect gate="A" pin="4" pad="4"/>
-<connect gate="A" pin="5" pad="5"/>
-<connect gate="A" pin="6" pad="6"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-<device name="70MIL" package="1X06_ROUND_70">
-<connects>
-<connect gate="A" pin="1" pad="1"/>
-<connect gate="A" pin="2" pad="2"/>
-<connect gate="A" pin="3" pad="3"/>
-<connect gate="A" pin="4" pad="4"/>
-<connect gate="A" pin="5" pad="5"/>
-<connect gate="A" pin="6" pad="6"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -1667,7 +1497,6 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <part name="GND4" library="supply1" deviceset="GND" device=""/>
 <part name="GND2" library="supply1" deviceset="GND" device=""/>
 <part name="U1" library="Jims" deviceset="TGN2600" device="" value="TGS2600"/>
-<part name="JP2" library="microbuilder" deviceset="HEADER-1X6" device="70MIL" value="TSL2591 Breakout"/>
 </parts>
 <sheets>
 <sheet>
@@ -1691,7 +1520,6 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <attribute name="NAME" x="5.334" y="26.162" size="1.778" layer="95"/>
 <attribute name="VALUE" x="3.81" y="6.858" size="1.778" layer="96"/>
 </instance>
-<instance part="JP2" gate="A" x="10.16" y="76.2" rot="MR180"/>
 </instances>
 <busses>
 </busses>
@@ -1700,12 +1528,7 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <segment>
 <pinref part="J1" gate="G$1" pin="1"/>
 <pinref part="JP1" gate="A" pin="1"/>
-<wire x1="-25.4" y1="43.18" x2="0" y2="43.18" width="0.1524" layer="91"/>
-<wire x1="0" y1="43.18" x2="7.62" y2="43.18" width="0.1524" layer="91"/>
-<wire x1="0" y1="43.18" x2="0" y2="68.58" width="0.1524" layer="91"/>
-<junction x="0" y="43.18"/>
-<pinref part="JP2" gate="A" pin="1"/>
-<wire x1="0" y1="68.58" x2="7.62" y2="68.58" width="0.1524" layer="91"/>
+<wire x1="-25.4" y1="43.18" x2="7.62" y2="43.18" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$3" class="0">
@@ -1730,10 +1553,6 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <pinref part="GND1" gate="1" pin="GND"/>
 <wire x1="-7.62" y1="40.64" x2="-7.62" y2="48.26" width="0.1524" layer="91"/>
 <junction x="-7.62" y="48.26"/>
-<wire x1="-7.62" y1="53.34" x2="-7.62" y2="71.12" width="0.1524" layer="91"/>
-<junction x="-7.62" y="53.34"/>
-<pinref part="JP2" gate="A" pin="2"/>
-<wire x1="-7.62" y1="71.12" x2="7.62" y2="71.12" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="U2" gate="G$1" pin="GND"/>
@@ -1776,13 +1595,8 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <net name="N$2" class="0">
 <segment>
 <pinref part="J1" gate="G$1" pin="4"/>
-<wire x1="-25.4" y1="50.8" x2="-10.16" y2="50.8" width="0.1524" layer="91"/>
 <pinref part="JP1" gate="A" pin="4"/>
-<wire x1="-10.16" y1="50.8" x2="7.62" y2="50.8" width="0.1524" layer="91"/>
-<wire x1="-10.16" y1="50.8" x2="-10.16" y2="81.28" width="0.1524" layer="91"/>
-<junction x="-10.16" y="50.8"/>
-<pinref part="JP2" gate="A" pin="6"/>
-<wire x1="-10.16" y1="81.28" x2="7.62" y2="81.28" width="0.1524" layer="91"/>
+<wire x1="-25.4" y1="50.8" x2="7.62" y2="50.8" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="SDA" class="0">
@@ -1790,15 +1604,10 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <pinref part="J1" gate="G$1" pin="3"/>
 <wire x1="-25.4" y1="48.26" x2="-17.78" y2="48.26" width="0.1524" layer="91"/>
 <wire x1="-17.78" y1="48.26" x2="-17.78" y2="55.88" width="0.1524" layer="91"/>
-<wire x1="-17.78" y1="55.88" x2="-2.54" y2="55.88" width="0.1524" layer="91"/>
-<wire x1="-2.54" y1="55.88" x2="2.54" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="-17.78" y1="55.88" x2="2.54" y2="55.88" width="0.1524" layer="91"/>
 <wire x1="2.54" y1="55.88" x2="2.54" y2="53.34" width="0.1524" layer="91"/>
 <pinref part="JP1" gate="A" pin="5"/>
 <wire x1="2.54" y1="53.34" x2="7.62" y2="53.34" width="0.1524" layer="91"/>
-<wire x1="-2.54" y1="55.88" x2="-2.54" y2="78.74" width="0.1524" layer="91"/>
-<junction x="-2.54" y="55.88"/>
-<pinref part="JP2" gate="A" pin="5"/>
-<wire x1="-2.54" y1="78.74" x2="7.62" y2="78.74" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$8" class="1">
